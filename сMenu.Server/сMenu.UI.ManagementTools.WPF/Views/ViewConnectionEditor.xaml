@@ -1,0 +1,142 @@
+﻿<Window
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+		xmlns:ViewModels="clr-namespace:cMenu.UI.ManagementTools.WPF.ViewModels" 
+		xmlns:Helpers="clr-namespace:cMenu.UI.ManagementTools.WPF.Core.Helpers"
+		mc:Ignorable="d" 
+		x:Class="cMenu.UI.ManagementTools.WPF.Views.frmMtConnectionEditor"
+		Title="Редактор подключения" Height="524" Width="464" ResizeMode="NoResize" ShowInTaskbar="False" Icon="/cMenu.UI.ManagementTools.WPF;component/Resources/Images/icoConnectionManager.png" WindowStartupLocation="CenterScreen">
+	<Window.Resources>
+		<Style TargetType="{x:Type Button}" x:Key="styleSaveButton">
+			<Style.Triggers>
+				<DataTrigger Binding="{Binding ElementName=editName, Path=(Validation.HasError)}" Value="True">
+					<Setter Property="Button.IsEnabled" Value="False"/>
+				</DataTrigger>
+				<DataTrigger Binding="{Binding ElementName=editID, Path=(Validation.HasError)}" Value="True">
+					<Setter Property="Button.IsEnabled" Value="False"/>
+				</DataTrigger>
+				<DataTrigger Binding="{Binding ElementName=editDBServerAddress, Path=(Validation.HasError)}" Value="True">
+					<Setter Property="Button.IsEnabled" Value="False"/>
+				</DataTrigger>
+				<DataTrigger Binding="{Binding ElementName=editDBName, Path=(Validation.HasError)}" Value="True">
+					<Setter Property="Button.IsEnabled" Value="False"/>
+				</DataTrigger>
+				<DataTrigger Binding="{Binding ElementName=editDBUser, Path=(Validation.HasError)}" Value="True">
+					<Setter Property="Button.IsEnabled" Value="False"/>
+				</DataTrigger>
+				<DataTrigger Binding="{Binding ElementName=editDBPassword, Path=(Validation.HasError)}" Value="True">
+					<Setter Property="Button.IsEnabled" Value="False"/>
+				</DataTrigger>
+				<DataTrigger Binding="{Binding ElementName=editDBType, Path=(Validation.HasError)}" Value="True">
+					<Setter Property="Button.IsEnabled" Value="False"/>
+				</DataTrigger>
+                <DataTrigger Binding="{Binding ElementName=editLocale, Path=(Validation.HasError)}" Value="True">
+                    <Setter Property="Button.IsEnabled" Value="False"/>
+                </DataTrigger>
+            </Style.Triggers>
+		</Style>
+	</Window.Resources>
+	<Window.DataContext>
+		<ViewModels:ViewModelConnectionEditor/>
+	</Window.DataContext>
+    <Grid>
+	<Grid.RowDefinitions>
+		<RowDefinition Height="136"/>
+		<RowDefinition Height="188"/>
+		<RowDefinition Height="121" />
+		<RowDefinition Height="55*" />
+	</Grid.RowDefinitions>
+		
+	<GroupBox Grid.Row="0" Margin="8,0,8,8" Header="Общее">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="79"/>
+				<ColumnDefinition Width="255*"/>
+				<ColumnDefinition Width="80"/>
+			</Grid.ColumnDefinitions>
+				
+			<TextBlock Text="Имя:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+			<TextBlock Text="ID:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+			<TextBlock Text="Код языка:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+
+			<TextBox x:Name="editName" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,10,0" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource styleErrorTextBox}"/>
+			<TextBox x:Name="editID" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding ID, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource styleErrorTextBox}" IsReadOnly="True"/>
+			<TextBox x:Name="editLocale" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Text="{Binding LanguageCode, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource styleErrorTextBox}"  Margin="0,0,10,0"/>
+				
+			<Button x:Name="btnIDNew" Content="Новый" Grid.Column="2" Margin="8,6.52,10,6.28" Grid.Row="1" Command="{Binding CmdNewGuid, Mode=OneWay}"/>
+		</Grid>
+	</GroupBox>
+
+	<GroupBox Grid.Row="1" Margin="8,0,8,8" Header="Подключение к БД">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="119"/>
+				<ColumnDefinition Width="444*"/>
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Text="Адрес сервера БД:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+			<TextBlock Text="Наименование БД:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+			<TextBlock Text="Тип БД:" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+			<TextBlock Text="Пользователь БД:" Grid.Row="3" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+			<TextBlock Text="Пароль:" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+
+			<TextBox x:Name="editDBServerAddress" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,10,0" Text="{Binding ServerAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource styleErrorTextBox}"/>
+			<TextBox x:Name="editDBName" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,10,0" Text="{Binding DatabaseName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource styleErrorTextBox}"/>
+			<ComboBox x:Name="editDBType" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,10,0" 
+						SelectedIndex="{Binding SelectedDatabaseTypeIndex, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}">
+				<ComboBoxItem Content="Microsoft SQL Database Server 2005, 2008, 2012"/>
+				<ComboBoxItem Content="Oracle MySQL Database Server"/>
+				<ComboBoxItem Content="Oracle Database Server"/>
+				<ComboBoxItem Content="SQLLite Database Provider"/>
+			</ComboBox>
+			<TextBox x:Name="editDBUser" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,10,0" Text="{Binding DatabaseUser, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" Style="{StaticResource styleErrorTextBox}"/>
+			<PasswordBox x:Name="editDBPassword" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,10,0" 
+							Helpers:CMTPasswordHelper.Attach="true"
+							Helpers:CMTPasswordHelper.Password="{Binding DatabasePassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" 
+							Style="{StaticResource styleErrorPasswordBox}"/>
+		</Grid>
+	</GroupBox>
+
+	<GroupBox Grid.Row="2" Margin="8,0,8,0" Header="Подключение к серверу iMenu">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="99"/>
+				<ColumnDefinition Width="315*"/>
+			</Grid.ColumnDefinitions>
+
+			<TextBlock Text="Пользователь:" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+			<TextBlock Text="Пароль:" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0"/>
+
+			<TextBox x:Name="editSystemUser" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0,0,10,0" Text="{Binding SystemUser, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+			<PasswordBox x:Name="editSystemPassword" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Center"  Margin="0,0,10,0" 
+							Helpers:CMTPasswordHelper.Attach="true"
+							Helpers:CMTPasswordHelper.Password="{Binding SystemPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+			<CheckBox x:Name="editSaveCredentials" Grid.Row="2" Grid.ColumnSpan="2" Content="Сохранять имя пользователя и пароль в настройках" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="10,0,0,0" Width="Auto" IsChecked="{Binding SaveCredentials, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}" />
+		</Grid>
+	</GroupBox>
+		
+	<Button x:Name="btnCancel" Grid.Row="3" Content="Отмена" HorizontalAlignment="Right" VerticalAlignment="Center" Width="70" Margin="0,0,10,0" Command="{Binding CmdCancel, Mode=OneWay}" IsCancel="True" />
+	<Button x:Name="btnOK" Grid.Row="3" Content="OK" HorizontalAlignment="Right" VerticalAlignment="Center" Width="70" Margin="0,0,90,0" Style="{StaticResource ResourceKey=styleSaveButton}" Command="{Binding CmdSave, Mode=OneWay}" IsDefault="True">
+			
+	</Button>
+</Grid>
+</Window>

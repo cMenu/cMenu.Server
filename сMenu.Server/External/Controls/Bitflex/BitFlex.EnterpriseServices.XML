@@ -1,0 +1,1427 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BitFlex.EnterpriseServices</name>
+    </assembly>
+    <members>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.Winlogon">
+            <summary>
+            Represents the types of Winlogon users
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.WindowsShell.Winlogon.CurrentUser">
+            <summary>
+            The current user
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.WindowsShell.Winlogon.LocalMachine">
+            <summary>
+            The local machine (All users)
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoFavoritesMenuPolicy">
+            <summary>
+            Policy that prevents users from adding the Favorites menu to the Start menu.
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.ExplorerPolicyBase">
+            <summary>
+            Base class to implement an Explorer Policy
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.IWinlogonPolicy">
+            <summary>
+            Represents a Windows Logon Policy for either CurrentUser or LocalMachine
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.IWinlogonPolicy.Apply">
+            <summary>
+            Applies the policy
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.IWinlogonPolicy.Remove">
+            <summary>
+            Removes the policy
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.IWinlogonPolicy.Enforced">
+            <summary>
+            Gets a System.Boolean value indicating whether or not the Winlogon policy is currently enforced on the system
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.IWinlogonPolicy.Logon">
+            <summary>
+            Interface property
+            Determines the type of Winlogon that this policy applies to
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.IWinlogonPolicy.Name">
+            <summary>
+            Gets the name of the policy
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.ExplorerPolicyBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.WindowsShell.ExplorerPolicyBase class
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.ExplorerPolicyBase.Apply">
+            <summary>
+            Applies the policy to the system
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.ExplorerPolicyBase.Remove">
+            <summary>
+            Removes the policy from the system
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.ExplorerPolicyBase.Enforced">
+            <summary>
+            Gets a System.Boolean value indicating whether this policy is currently enforced in the system
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.ExplorerPolicyBase.Logon">
+            <summary>
+            Gets or sets the Winlogon that this policy will apply to
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.ExplorerPolicyBase.Name">
+            <summary>
+            Gets the name of the policy
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoFavoritesMenuPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoFavoritesMenuPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoTrayContextMenuPolicy">
+            <summary>
+            Policy that disables the context menu for the Taskbar
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoTrayContextMenuPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoTrayContextMenuPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Authentication.AuthenticationResult">
+            <summary>
+            Results that are returned when trying to authenticate
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Authentication.AuthenticationResult.Error">
+            <summary>
+            An error occurred when trying to authenticate
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Authentication.AuthenticationResult.IncorrectPassword">
+            <summary>
+            The incorrect password was supplied
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Authentication.AuthenticationResult.NetworkError">
+            <summary>
+            An network error occurred when trying to authenticate
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Authentication.AuthenticationResult.Success">
+            <summary>
+            The authentication was successful
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Authentication.AuthenticationResult.UserNotFound">
+            <summary>
+            The user was not found in the datasource
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoSetFoldersPolicy">
+            <summary>
+            Policy that prevents Control Panel, Printers, and Network and Dial-up Connections from running
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoSetFoldersPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoSetFoldersPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoNetHoodPolicy">
+            <summary>
+            Policy that removes the "My Network Places" icon from the desktop
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoNetHoodPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoNetHoodPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Authentication.EncryptionType">
+            <summary>
+            Specifies different levels of enterprise encryption
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Authentication.EncryptionType.Raw">
+            <summary>
+            Raw text
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Authentication.EncryptionType.Md5">
+            <summary>
+            MD5 hash encryption
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Authentication.RegistryAuthenticationKeyMap">
+            <summary>
+            Creates a mapping of a registry key and its associated values
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.RegistryAuthenticationKeyMap.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.Authentication.RegistryAuthenticationKeyMap class
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.RegistryAuthenticationKeyMap.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.Authentication.RegistryAuthenticationKeyMap class
+            </summary>
+            <param name="keyRoot">The full path to the key that stores the registry values</param>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.RegistryAuthenticationKeyMap.KeyRoot">
+            <summary>
+            Gets or sets the full path of the root Registry Key
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.RegistryAuthenticationKeyMap.NameValue">
+            <summary>
+            Gets or sets the name of the value item that stores the user's name
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.RegistryAuthenticationKeyMap.PasswordValue">
+            <summary>
+            Gets or sets the name of the value item that stores the user's password
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoFolderOptionsPolicy">
+            <summary>
+            Policy that removes the Folder Options item from all Windows Explorer menus and removes the Folder Options item from Control Panel. As a result, users cannot use the Folder Options dialog box.
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoFolderOptionsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoFolderOptionsPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Authentication.IAuthenticationService`1">
+            <summary>
+            Interface that performs authentication for a user
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.IAuthenticationService`1.Authenticate(`0)">
+            <summary>
+            Authenticates the specified user
+            </summary>
+            <param name="user">The user to authenticate</param>
+            <returns>Returns an <see cref="T:BitFlex.EnterpriseServices.Authentication.AuthenticationResult"/> enumeration</returns>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.IAuthenticationService`1.EncryptPassword(System.String)">
+            <summary>
+            Encrypts the specified password based on the encryption property
+            </summary>
+            <param name="password">The password to encrypt</param>
+            <returns>Returns the encrypted password</returns>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.IAuthenticationService`1.Encoding">
+            <summary>
+            Gets or sets the encoding that will be used
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.IAuthenticationService`1.Encryption">
+            <summary>
+            Gets or sets the type of encryption that will be used
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoFindPolicy">
+            <summary>
+            Policy that removes or disables selected search features.
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoFindPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoFindPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoSaveSettingsPolicy">
+            <summary>
+            Policy that prevents users from saving certain changes to the desktop
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoSaveSettingsPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoSaveSettingsPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Input.MouseHookEventArgs">
+            <summary>
+            Event Arguments for <see cref="E:BitFlex.EnterpriseServices.Input.HookService.MouseMove"/>
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.MouseHookEventArgs.#ctor(System.Windows.Forms.MouseButtons,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.MouseHookEventArgs class
+            </summary>
+            <param name="button">One of the System.Windows.Forms.MouseButtons values indicating which mouse button was pressed</param>
+            <param name="clicks">The number of times a mouse button was pressed</param>
+            <param name="x">The x-coordinate of a mouse click, in pixels</param>
+            <param name="y">The y-coordinate of a mouse click, in pixels</param>
+            <param name="delta">A signed count of the number of detents the wheel has rotated</param>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.MouseHookEventArgs.#ctor(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.MouseHookEventArgs class
+            </summary>
+            <param name="e">A <see cref="T:System.Windows.Forms.MouseEventArgs"/> object that defines the mouse properties</param>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Input.MouseHookEventArgs.Handled">
+            <summary>
+            Gets or sets a System.Boolean value indicating whether the mouse events will be processed for other applications (globally)
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoDriveTypeAutoRunPolicy">
+            <summary>
+            Policy that disables the AutoPlay feature
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoDriveTypeAutoRunPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoDriveTypeAutoRunPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService">
+            <summary>
+            Provides methods and routines to enforce actions on various parts of the Windows Shell (Explorer)
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.DisableStartButton">
+            <summary>
+            Disables the Windows Start Button
+            </summary>
+            <remarks>This only applies to Windows Vista or above</remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.DisableTaskbar">
+            <summary>
+            Disables the Windows Taskbar
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.EnableStartButton">
+            <summary>
+            Enables the Windows Start Button
+            </summary>
+            <remarks>This only applies to Windows Vista or above</remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.EnableTaskbar">
+            <summary>
+            Enables the Windows Taskbar
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.GetShell(BitFlex.EnterpriseServices.WindowsShell.Winlogon)">
+            <summary>
+            Gets the shell from the Windows Registry and returns the path
+            </summary>
+            <param name="logon">The <see cref="T:BitFlex.EnterpriseServices.WindowsShell.Winlogon"/> enumeration value to get the shell for</param>
+            <returns>Returns the full path or name of the shell</returns>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.HideStartButton">
+            <summary>
+            Hides the Windows Start Button
+            </summary>
+            <remarks>This method only applies to Windows Vista or above.</remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.HideTaskbar">
+            <summary>
+            Hides the Windows Taskbar
+            </summary>
+            <remarks>
+            In Windows XP Service Pack 3 or later operating platforms, the Windows Taskbar no longer is affected by
+            SHAppBarMessage calls, and the working area of the desktop cannot be modified. What this means is that
+            you can hide the Taskbar and Start Button, but the area reserved by the Taskbar will still stand, and
+            cannot be changed.
+            
+            The only work around for this, is that you set your application to TopMost so it overlaps the reserved
+            space.
+            </remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.ResetShell">
+            <summary>
+            Resets the Windows Shell back to Explorer.exe
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.SetShell(BitFlex.EnterpriseServices.WindowsShell.Winlogon,System.String)">
+            <summary>
+            Sets the Windows Shell to use the specified shell application
+            </summary>
+            <param name="logon">The <see cref="T:BitFlex.EnterpriseServices.WindowsShell.Winlogon"/> enumeration value to set the shell application for</param>
+            <param name="shell">The full path to the shell executable.</param>
+            <remarks>
+            The path to the shell program can be relative only if the application binary resides within the Windows directory.
+            </remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.ShowStartButton">
+            <summary>
+            Shows the Windows Start Button
+            </summary>
+            <remarks>This only applies to Windows Vista or above</remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.ShowTaskbar">
+            <summary>
+            Shows the Windows Taskbar
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.DisableChangePasswordPolicy">
+            <summary>
+            Gets or sets the policy that prevents users from being able to change their password
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.DisableLockWorkstationPolicy">
+            <summary>
+            Gets or sets the policy that prevents users from locking the system
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.DisableTaskMgrPolicy">
+            <summary>
+            Gets or sets the policy that prevents users from accessing the Windows Task Manager
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoClosePolicy">
+            <summary>
+            Gets or sets the policy that prevents users from shutting down or restarting Windows
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoDesktopPolicy">
+            <summary>
+            Gets or sets the policy that hides all icons on the Windows Desktop
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoDrivesPolicy">
+            <summary>
+            Gets or sets the policy that removes the icons representing selected drives from My Computer and Windows Explorer. Also, the drive letters representing the selected drives do not appear in the standard Open dialog box
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoDriveTypeAutoRunPolicy">
+            <summary>
+            Gets or sets the policy that disables the AutoPlay feature
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoFavoritesMenuPolicy">
+            <summary>
+            Gets or sets the policy that prevents users from adding the Favorites menu to the Start menu.
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoFindPolicy">
+            <summary>
+            Gets or sets the policy that defines whether or not the shell removes or disables selected search features.
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoFolderOptionsPolicy">
+            <summary>
+            Gets or sets the policy that removes the Folder Options item from all Windows Explorer menus and removes the Folder Options item from Control Panel. As a result, users cannot use the Folder Options dialog box.
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoNetHoodPolicy">
+            <summary>
+            Gets or sets the policy that removes the "My Network Places" icon from the desktop
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoRecentDocsMenuPolicy">
+            <summary>
+            Gets or sets the policy that removes the Documents menu from the Start menu.
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoRunPolicy">
+            <summary>
+            Gets or sets the policy that removes the run menu from the start menu
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoSaveSettingsPolicy">
+            <summary>
+            Gets or sets the policy prevents users from saving certain changes to the desktop
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoSetActiveDesktopPolicy">
+            <summary>
+            Gets or sets the policy removes the Active Desktop options from Settings on the Start Menu.
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoSetFoldersPolicy">
+            <summary>
+            Gets or sets the policy that prevents Control Panel, Printers, and Network and Dial-up Connections from running
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoTrayContextMenuPolicy">
+            <summary>
+            Gets or sets the policy that disables the context menu for the Taskbar
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.WindowsShellService.NoViewContextMenuPolicy">
+            <summary>
+            Gets or sets the policy that disables Windows Explorer's default context menu
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.SystemPolicyBase">
+            <summary>
+            Base class to implement a System Policy
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.SystemPolicyBase.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.WindowsShell.SystemPolicyBase class
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.SystemPolicyBase.Apply">
+            <summary>
+            Applies the policy to the system
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.SystemPolicyBase.Remove">
+            <summary>
+            Removes the policy from the system
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.SystemPolicyBase.Enforced">
+            <summary>
+            Gets a System.Boolean value indicating whether this policy is currently enforced in the system
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.SystemPolicyBase.Logon">
+            <summary>
+            Gets or sets the Winlogon that this policy will apply to
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.WindowsShell.SystemPolicyBase.Name">
+            <summary>
+            Gets the name of the policy
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.PolicyAccessException">
+            <summary>
+            Exception thrown when access to a policy is not authorized to the current caller or user
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.PolicyAccessException.#ctor(System.String,System.Exception)">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.WindowsShell.PolicyAccessException class
+            </summary>
+            <param name="message">Sets a custom message for this exception</param>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.PolicyAccessException.#ctor(System.Exception)">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.WindowsShell.PolicyAccessException class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.DisableChangePasswordPolicy">
+            <summary>
+            Policy that prevents users from being able to change their password
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.DisableChangePasswordPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.DisableChangePasswordPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Authentication.SqlAuthentication`1">
+            <summary>
+            Performs basic enterprise level authentication against an sql datasource
+            </summary>
+            <typeparam name="TUser">A user based on <see cref="T:BitFlex.EnterpriseServices.Authentication.ISecureUser"/> used to perform authentication</typeparam>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.SqlAuthentication`1.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.Authentication.SqlAuthentication class
+            </summary>
+            <param name="connectionString">The connection string used to connect to the datasourceS</param>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.SqlAuthentication`1.MapDataSource(System.String,System.String,System.String)">
+            <summary>
+            Maps the sql authentication service to the specified table and columns in the sql datasource
+            </summary>
+            <param name="tableName">The name of the sql table to map</param>
+            <param name="nameColumn">The name of the sql column that stores the user's name to map</param>
+            <param name="passwordColumn">The name of the sql column that stores the user's password to map</param>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.SqlAuthentication`1.Authenticate(`0)">
+            <summary>
+            Authenticates the specified user against the sql datasource
+            </summary>
+            <param name="user">The user to authenticate</param>
+            <returns>Returns a <see cref="T:BitFlex.EnterpriseServices.Authentication.AuthenticationResult"/> enumeration</returns>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.SqlAuthentication`1.EncryptPassword(System.String)">
+            <summary>
+            Encrypts the specified password using Enterpise level encryption
+            </summary>
+            <param name="password">The password to encrypt</param>
+            <returns>Returns the fully encrypted password</returns>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.SqlAuthentication`1.ConnectionString">
+            <summary>
+            Gets or sets the connection string used to connect to the datasource
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.SqlAuthentication`1.DataSourceMap">
+            <summary>
+            Gets or sets the sql mapping for the table that is used to store users
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.SqlAuthentication`1.Encoding">
+            <summary>
+            Gets or sets the encoding used when altering passwords during encryption
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.SqlAuthentication`1.Encryption">
+            <summary>
+            Gets or sets the type of enterprise encryption that will be used when sending passwords
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService">
+            <summary>
+            Provides methods and routines to enforce actions on various keys and key combinations within Windows
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.m_ControlKeyPressed">
+            <devdoc>
+            System.Boolean value indicating whether the Control key is pressed
+            </devdoc>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.m_AltKeyPressed">
+            <devdoc>
+            System.Boolean value indicating whether the Alt key is pressed
+            </devdoc>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.DisableAltF4">
+            <summary>
+            Disables the ALT+F4 keyboard combination
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.DisableAltTab">
+            <summary>
+            Disables the ALT+TAB keyboard combination
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.DisableControlEscape">
+            <summary>
+            Disables the CTRL+ESC keyboard combination
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.DisableWinKey">
+            <summary>
+            Disables the Windows Key using a Low-Level System Hook
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.EnableAltF4">
+            <summary>
+            Enables the ALT+F4 keyboard combination
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.EnableAltTab">
+            <summary>
+            Enables the ALT+TAB keyboard combination
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.EnableControlEscape">
+            <summary>
+            Enables the CTRL+ESC keyboard combination
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.WindowsKeyService.EnableWinKey">
+            <summary>
+            Enables the Windows Key using a Low-Level System Hook
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoClosePolicy">
+            <summary>
+            Policy that prevents users from shutting down or restarting Windows
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoClosePolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoClosePolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.DeprecatedPlatformException">
+            <summary>
+            Exception should be thrown when a method is called on a platform that is not supported
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.DeprecatedPlatformException.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.WindowsShell.DeprecatedPlatformException class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoSetActiveDesktopPolicy">
+            <summary>
+            Policy that removes the Active Desktop options from Settings on the Start Menu.
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoSetActiveDesktopPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoSetActiveDesktopPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoViewContextMenuPolicy">
+            <summary>
+            Policy that disables Windows Explorer's default context menu
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoViewContextMenuPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoViewContextMenuPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Properties.Resources.PolicyAccessExceptionMessage">
+            <summary>
+              Looks up a localized string similar to Access to the policy is not authorized. This could be due to lack of administrative permissions or restricted access to components in Windows such as the system registry..
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoRecentDocsMenuPolicy">
+            <summary>
+            Policy that removes the Documents menu from the Start menu.
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoRecentDocsMenuPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoRecentDocsMenuPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoDrivesPolicy">
+            <summary>
+            Policy that removes the icons representing selected drives from My Computer and Windows Explorer. Also, the drive letters representing the selected drives do not appear in the standard Open dialog box
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoDrivesPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoDrivesPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.DisableTaskMgrPolicy">
+            <summary>
+            Policy that prevents users from accessing the Windows Task Manager
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.DisableTaskMgrPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.DisableTaskMgrPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoDesktopPolicy">
+            <summary>
+            Policy that hides all icons on the Windows Desktop
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoDesktopPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoDesktopPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.NoRunPolicy">
+            <summary>
+            Policy that removes the run menu from the start menu
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.NoRunPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.NoRunPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.WindowsShell.DisableLockWorkstationPolicy">
+            <summary>
+            Policy that prevents users from locking the system
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.WindowsShell.DisableLockWorkstationPolicy.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.DisableLockWorkstationPolicy class
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Authentication.SqlAuthenticationTableMap">
+            <summary>
+            Creates a mapping of a Sql table and its associated columns
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.SqlAuthenticationTableMap.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.Authentication.SqlAuthenticationTableMap class
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.SqlAuthenticationTableMap.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.Authentication.SqlAuthenticationTableMap class
+            </summary>
+            <param name="tableName">The name of the sql table</param>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.SqlAuthenticationTableMap.NameColumn">
+            <summary>
+            Gets or sets the name of the column used to store user's names
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.SqlAuthenticationTableMap.PasswordColumn">
+            <summary>
+            Gets or sets the name of the column used to store user's passwords
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.SqlAuthenticationTableMap.TableName">
+            <summary>
+            Gets or sets the name of the sql table
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Authentication.RegistryAuthentication`1">
+            <summary>
+            Performs basic enterprise level authentication against the Windows Registry
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.RegistryAuthentication`1.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.EnterpriseServices.Authentication.RegistryAuthentication class
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.RegistryAuthentication`1.MapDataSource(System.String,System.String,System.String)">
+            <summary>
+            Maps the registry authentication service to the specified key and values in the registry datasource
+            </summary>
+            <param name="tableName">The full path of the registry key to map</param>
+            <param name="nameColumn">The name of the registry value that stores the user's name to map</param>
+            <param name="passwordColumn">The name of the registry value that stores the user's password to map</param>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.RegistryAuthentication`1.Authenticate(`0)">
+            <summary>
+            Authenticates the specified user against the registry datasource
+            </summary>
+            <param name="user">The user to authenticate</param>
+            <returns>Returns a <see cref="T:BitFlex.EnterpriseServices.Authentication.AuthenticationResult"/> enumeration</returns>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Authentication.RegistryAuthentication`1.EncryptPassword(System.String)">
+            <summary>
+            Encrypts the specified password using Enterpise level encryption
+            </summary>
+            <param name="password">The password to encrypt</param>
+            <returns>Returns the fully encrypted password</returns>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.RegistryAuthentication`1.DataSourceMap">
+            <summary>
+            Gets or sets the mapping that defines the registry key and its associated values
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.RegistryAuthentication`1.Encoding">
+            <summary>
+            Gets or sets the encoding used when altering passwords during encryption
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.RegistryAuthentication`1.Encryption">
+            <summary>
+            Gets or sets the type of enterprise encryption that will be used when sending passwords
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Input.HookService">
+            <summary>
+            Low level system-based class to monitor and capture global keyboard and mouse input events
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WH_MOUSE_LL">
+            <summary>
+            Windows NT/2000/XP: Installs a hook procedure that monitors low-level mouse input events.
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WH_KEYBOARD_LL">
+            <summary>
+            Windows NT/2000/XP: Installs a hook procedure that monitors low-level keyboard  input events.
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WH_MOUSE">
+            <summary>
+            Installs a hook procedure that monitors mouse messages. For more information, see the MouseProc hook procedure. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WH_KEYBOARD">
+            <summary>
+            Installs a hook procedure that monitors keystroke messages. For more information, see the KeyboardProc hook procedure. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_MOUSEMOVE">
+            <summary>
+            The WM_MOUSEMOVE message is posted to a window when the cursor moves. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_LBUTTONDOWN">
+            <summary>
+            The WM_LBUTTONDOWN message is posted when the user presses the left mouse button 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_RBUTTONDOWN">
+            <summary>
+            The WM_RBUTTONDOWN message is posted when the user presses the right mouse button
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_MBUTTONDOWN">
+            <summary>
+            The WM_MBUTTONDOWN message is posted when the user presses the middle mouse button 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_LBUTTONUP">
+            <summary>
+            The WM_LBUTTONUP message is posted when the user releases the left mouse button 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_RBUTTONUP">
+            <summary>
+            The WM_RBUTTONUP message is posted when the user releases the right mouse button 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_MBUTTONUP">
+            <summary>
+            The WM_MBUTTONUP message is posted when the user releases the middle mouse button 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_LBUTTONDBLCLK">
+            <summary>
+            The WM_LBUTTONDBLCLK message is posted when the user double-clicks the left mouse button 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_RBUTTONDBLCLK">
+            <summary>
+            The WM_RBUTTONDBLCLK message is posted when the user double-clicks the right mouse button 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_MBUTTONDBLCLK">
+            <summary>
+            The WM_RBUTTONDOWN message is posted when the user presses the right mouse button 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_MOUSEWHEEL">
+            <summary>
+            The WM_MOUSEWHEEL message is posted when the user presses the mouse wheel. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_KEYDOWN">
+            <summary>
+            The WM_KEYDOWN message is posted to the window with the keyboard focus when a nonsystem 
+            key is pressed. A nonsystem key is a key that is pressed when the ALT key is not pressed.
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_KEYUP">
+            <summary>
+            The WM_KEYUP message is posted to the window with the keyboard focus when a nonsystem 
+            key is released. A nonsystem key is a key that is pressed when the ALT key is not pressed, 
+            or a keyboard key that is pressed when a window has the keyboard focus.
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_SYSKEYDOWN">
+            <summary>
+            The WM_SYSKEYDOWN message is posted to the window with the keyboard focus when the user 
+            presses the F10 key (which activates the menu bar) or holds down the ALT key and then 
+            presses another key. It also occurs when no window currently has the keyboard focus; 
+            in this case, the WM_SYSKEYDOWN message is sent to the active window. The window that 
+            receives the message can distinguish between these two contexts by checking the context 
+            code in the lParam parameter. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.WM_SYSKEYUP">
+            <summary>
+            The WM_SYSKEYUP message is posted to the window with the keyboard focus when the user 
+            releases a key that was pressed while the ALT key was held down. It also occurs when no 
+            window currently has the keyboard focus; in this case, the WM_SYSKEYUP message is sent 
+            to the active window. The window that receives the message can distinguish between 
+            these two contexts by checking the context code in the lParam parameter. 
+            </summary>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.HookService.CallNextHookEx(System.Int32,System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            The CallNextHookEx function passes the hook information to the next hook procedure in the current hook chain. 
+            A hook procedure can call this function either before or after processing the hook information. 
+            </summary>
+            <param name="idHook">Ignored.</param>
+            <param name="nCode">
+            [in] Specifies the hook code passed to the current hook procedure. 
+            The next hook procedure uses this code to determine how to process the hook information.
+            </param>
+            <param name="wParam">
+            [in] Specifies the wParam value passed to the current hook procedure. 
+            The meaning of this parameter depends on the type of hook associated with the current hook chain. 
+            </param>
+            <param name="lParam">
+            [in] Specifies the lParam value passed to the current hook procedure. 
+            The meaning of this parameter depends on the type of hook associated with the current hook chain. 
+            </param>
+            <returns>
+            This value is returned by the next hook procedure in the chain. 
+            The current hook procedure must also return this value. The meaning of the return value depends on the hook type. 
+            For more information, see the descriptions of the individual hook procedures.
+            </returns>
+            <remarks>
+            http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/setwindowshookex.asp
+            </remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.HookService.SetWindowsHookEx(System.Int32,BitFlex.EnterpriseServices.Input.HookService.HookProc,System.IntPtr,System.Int32)">
+            <summary>
+            The SetWindowsHookEx function installs an application-defined hook procedure into a hook chain. 
+            You would install a hook procedure to monitor the system for certain types of events. These events 
+            are associated either with a specific thread or with all threads in the same desktop as the calling thread. 
+            </summary>
+            <param name="idHook">
+            [in] Specifies the type of hook procedure to be installed. This parameter can be one of the following values.
+            </param>
+            <param name="lpfn">
+            [in] Pointer to the hook procedure. If the dwThreadId parameter is zero or specifies the identifier of a 
+            thread created by a different process, the lpfn parameter must point to a hook procedure in a dynamic-link 
+            library (DLL). Otherwise, lpfn can point to a hook procedure in the code associated with the current process.
+            </param>
+            <param name="hMod">
+            [in] Handle to the DLL containing the hook procedure pointed to by the lpfn parameter. 
+            The hMod parameter must be set to NULL if the dwThreadId parameter specifies a thread created by 
+            the current process and if the hook procedure is within the code associated with the current process. 
+            </param>
+            <param name="dwThreadId">
+            [in] Specifies the identifier of the thread with which the hook procedure is to be associated. 
+            If this parameter is zero, the hook procedure is associated with all existing threads running in the 
+            same desktop as the calling thread. 
+            </param>
+            <returns>
+            If the function succeeds, the return value is the handle to the hook procedure.
+            If the function fails, the return value is NULL. To get extended error information, call GetLastError.
+            </returns>
+            <remarks>
+            http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/setwindowshookex.asp
+            </remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.HookService.UnhookWindowsHookEx(System.Int32)">
+            <summary>
+            The UnhookWindowsHookEx function removes a hook procedure installed in a hook chain by the SetWindowsHookEx function. 
+            </summary>
+            <param name="idHook">
+            [in] Handle to the hook to be removed. This parameter is a hook handle obtained by a previous call to SetWindowsHookEx. 
+            </param>
+            <returns>
+            If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, call GetLastError.
+            </returns>
+            <remarks>
+            http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/setwindowshookex.asp
+            </remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.HookService.GetDoubleClickTime">
+            <summary>
+            The GetDoubleClickTime function retrieves the current double-click time for the mouse. A double-click is a series of two clicks of the 
+            mouse button, the second occurring within a specified time after the first. The double-click time is the maximum number of 
+            milliseconds that may occur between the first and second click of a double-click. 
+            </summary>
+            <returns>
+            The return value specifies the current double-click time, in milliseconds. 
+            </returns>
+            <remarks>
+            http://msdn.microsoft.com/en-us/library/ms646258(VS.85).aspx
+            </remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.HookService.ToAscii(System.Int32,System.Int32,System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            The ToAscii function translates the specified virtual-key code and keyboard 
+            state to the corresponding character or characters. The function translates the code 
+            using the input language and physical keyboard layout identified by the keyboard layout handle.
+            </summary>
+            <param name="uVirtKey">
+            [in] Specifies the virtual-key code to be translated. 
+            </param>
+            <param name="uScanCode">
+            [in] Specifies the hardware scan code of the key to be translated. 
+            The high-order bit of this value is set if the key is up (not pressed). 
+            </param>
+            <param name="lpbKeyState">
+            [in] Pointer to a 256-byte array that contains the current keyboard state. 
+            Each element (byte) in the array contains the state of one key. 
+            If the high-order bit of a byte is set, the key is down (pressed). 
+            The low bit, if set, indicates that the key is toggled on. In this function, 
+            only the toggle bit of the CAPS LOCK key is relevant. The toggle state 
+            of the NUM LOCK and SCROLL LOCK keys is ignored.
+            </param>
+            <param name="lpwTransKey">
+            [out] Pointer to the buffer that receives the translated character or characters. 
+            </param>
+            <param name="fuState">
+            [in] Specifies whether a menu is active. This parameter must be 1 if a menu is active, or 0 otherwise. 
+            </param>
+            <returns>
+            If the specified key is a dead key, the return value is negative. Otherwise, it is one of the following values. 
+            Value Meaning 
+            0 The specified virtual key has no translation for the current state of the keyboard. 
+            1 One character was copied to the buffer. 
+            2 Two characters were copied to the buffer. This usually happens when a dead-key character 
+            (accent or diacritic) stored in the keyboard layout cannot be composed with the specified 
+            virtual key to form a single character. 
+            </returns>
+            <remarks>
+            http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/keyboardinput/keyboardinputreference/keyboardinputfunctions/toascii.asp
+            </remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.HookService.GetKeyboardState(System.Byte[])">
+            <summary>
+            The GetKeyboardState function copies the status of the 256 virtual keys to the 
+            specified buffer. 
+            </summary>
+            <param name="pbKeyState">
+            [in] Pointer to a 256-byte array that contains keyboard key states. 
+            </param>
+            <returns>
+            If the function succeeds, the return value is nonzero.
+            If the function fails, the return value is zero. To get extended error information, call GetLastError. 
+            </returns>
+            <remarks>
+            http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/userinput/keyboardinput/keyboardinputreference/keyboardinputfunctions/toascii.asp
+            </remarks>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.HookService.GetKeyState(System.Int32)">
+             <summary>
+             The GetKeyState function retrieves the status of the specified virtual key. The status specifies whether the key is up, down, or toggled 
+             (on, off—alternating each time the key is pressed). 
+             </summary>
+             <param name="vKey">
+             [in] Specifies a virtual key. If the desired virtual key is a letter or digit (A through Z, a through z, or 0 through 9), nVirtKey must be set to the ASCII value of that character. For other keys, it must be a virtual-key code. 
+             </param>
+             <returns>
+             The return value specifies the status of the specified virtual key, as follows: 
+            If the high-order bit is 1, the key is down; otherwise, it is up.
+            If the low-order bit is 1, the key is toggled. A key, such as the CAPS LOCK key, is toggled if it is turned on. The key is off and untoggled if the low-order bit is 0. A toggle key's indicator light (if any) on the keyboard will be on when the key is toggled, and off when the key is untoggled.
+             </returns>
+             <remarks>http://msdn.microsoft.com/en-us/library/ms646301.aspx</remarks>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.m_KeyboardDelegate">
+            <summary>
+            Field used to store the reference to the delegate used for keyboard events.
+            This is stored to prevent collection from the GC.
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.m_KeyboardHookHandle">
+            <summary>
+            Stores the handle to the Keyboard hook procedure.
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.m_MouseDelegate">
+            <devdoc>
+            Field used to store the reference to the delegate used for mouse events.
+            This is stored to prevent collection from the GC.
+            </devdoc>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.m_MouseDoubleClickTimer">
+            <devdoc>
+            Used by <see cref="E:BitFlex.EnterpriseServices.Input.HookService.MouseDoubleClick"/>
+            </devdoc>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.m_MouseHookHandle">
+            <devdoc>
+            Stores the handle to the mouse-hook procedure.
+            </devdoc>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.m_MousePreviousButtonClicked">
+            <devdoc>
+            Used by <see cref="E:BitFlex.EnterpriseServices.Input.HookService.MouseDoubleClick"/>
+            </devdoc>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.m_OldX">
+            <devdoc>
+            Stores the old x-value of the mouse
+            </devdoc>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.m_OldY">
+            <devdoc>
+            Stores the old y-value of the mouse
+            </devdoc>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.HookService.KeyboardHookProc(System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            A callback function which will be called every Time a keyboard activity detected.
+            </summary>
+            <param name="nCode">
+            [in] Specifies whether the hook procedure must process the message. 
+            If nCode is HC_ACTION, the hook procedure must process the message. 
+            If nCode is less than zero, the hook procedure must pass the message to the 
+            CallNextHookEx function without further processing and must return the 
+            value returned by CallNextHookEx.
+            </param>
+            <param name="wParam">
+            [in] Specifies whether the message was sent by the current thread. 
+            If the message was sent by the current thread, it is nonzero; otherwise, it is zero. 
+            </param>
+            <param name="lParam">
+            [in] Pointer to a CWPSTRUCT structure that contains details about the message. 
+            </param>
+            <returns>
+            If nCode is less than zero, the hook procedure must return the value returned by CallNextHookEx. 
+            If nCode is greater than or equal to zero, it is highly recommended that you call CallNextHookEx 
+            and return the value it returns; otherwise, other applications that have installed WH_CALLWNDPROC 
+            hooks will not receive hook notifications and may behave incorrectly as a result. If the hook 
+            procedure does not call CallNextHookEx, the return value should be zero. 
+            </returns>
+        </member>
+        <member name="M:BitFlex.EnterpriseServices.Input.HookService.MouseHookProc(System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            A callback function which will be called every Time a mouse activity detected.
+            </summary>
+            <param name="nCode">
+            [in] Specifies whether the hook procedure must process the message. 
+            If nCode is HC_ACTION, the hook procedure must process the message. 
+            If nCode is less than zero, the hook procedure must pass the message to the 
+            CallNextHookEx function without further processing and must return the 
+            value returned by CallNextHookEx.
+            </param>
+            <param name="wParam">
+            [in] Specifies whether the message was sent by the current thread. 
+            If the message was sent by the current thread, it is nonzero; otherwise, it is zero. 
+            </param>
+            <param name="lParam">
+            [in] Pointer to a CWPSTRUCT structure that contains details about the message. 
+            </param>
+            <returns>
+            If nCode is less than zero, the hook procedure must return the value returned by CallNextHookEx. 
+            If nCode is greater than or equal to zero, it is highly recommended that you call CallNextHookEx 
+            and return the value it returns; otherwise, other applications that have installed WH_CALLWNDPROC 
+            hooks will not receive hook notifications and may behave incorrectly as a result. If the hook 
+            procedure does not call CallNextHookEx, the return value should be zero. 
+            </returns>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.KeyDown">
+            <summary>
+            Triggered when a key on the keyboard is pressed
+            </summary>
+            <remarks>
+            Key events trigger in the following order:
+            <list type="number">
+                <item>KeyDown</item>
+                <item>KeyPress</item>
+                <item>KeyUp</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.KeyPress">
+            <summary>
+            Triggered when a key on the keyboard is pressed and released
+            </summary>
+            <remarks>
+            Key events trigger in the following order:
+            <list type="number">
+                <item>KeyDown</item>
+                <item>KeyPress</item>
+                <item>KeyUp</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.KeyUp">
+            <summary>
+            Triggered when a key on the keyboard is released
+            </summary>
+            <remarks>
+            Key events trigger in the following order:
+            <list type="number">
+                <item>KeyDown</item>
+                <item>KeyPress</item>
+                <item>KeyUp</item>
+            </list>
+            </remarks>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.MouseClick">
+            <summary>
+            Triggered when the mouse is clicked
+            </summary>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.MouseClickExtended">
+            <summary>
+            Triggered when the mouse is clicked and provides additional details about the global event
+            </summary>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.MouseDoubleClick">
+            <summary>
+            Triggered when the mouse button is double-clicked
+            </summary>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.MouseDown">
+            <summary>
+            Triggered when the mouse button is pressed
+            </summary>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.MouseMove">
+            <summary>
+            Triggered when the mouse is moved
+            </summary>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.MouseMoveExtended">
+            <summary>
+            Triggered when the mouse is moved and provides additional details about the global event
+            </summary>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.MouseUp">
+            <summary>
+            Triggered when the mouse button is released
+            </summary>
+        </member>
+        <member name="E:BitFlex.EnterpriseServices.Input.HookService.MouseWheel">
+            <summary>
+            Triggered when the mouse wheel moves
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Input.HookService.HookProc">
+            <summary>
+            The CallWndProc hook procedure is an application-defined or library-defined callback 
+            function used with the SetWindowsHookEx function. The HOOKPROC type defines a pointer 
+            to this callback function. CallWndProc is a placeholder for the application-defined 
+            or library-defined function name.
+            </summary>
+            <param name="nCode">
+            [in] Specifies whether the hook procedure must process the message. 
+            If nCode is HC_ACTION, the hook procedure must process the message. 
+            If nCode is less than zero, the hook procedure must pass the message to the 
+            CallNextHookEx function without further processing and must return the 
+            value returned by CallNextHookEx.
+            </param>
+            <param name="wParam">
+            [in] Specifies whether the message was sent by the current thread. 
+            If the message was sent by the current thread, it is nonzero; otherwise, it is zero. 
+            </param>
+            <param name="lParam">
+            [in] Pointer to a CWPSTRUCT structure that contains details about the message. 
+            </param>
+            <returns>
+            If nCode is less than zero, the hook procedure must return the value returned by CallNextHookEx. 
+            If nCode is greater than or equal to zero, it is highly recommended that you call CallNextHookEx 
+            and return the value it returns; otherwise, other applications that have installed WH_CALLWNDPROC 
+            hooks will not receive hook notifications and may behave incorrectly as a result. If the hook 
+            procedure does not call CallNextHookEx, the return value should be zero. 
+            </returns>
+            <remarks>
+            http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookfunctions/callwndproc.asp
+            </remarks>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Input.HookService.Point">
+            <summary>
+            The Point structure defines the X- and Y- coordinates of a point. 
+            </summary>
+            <remarks>
+            http://msdn.microsoft.com/library/default.asp?url=/library/en-us/gdi/rectangl_0tiq.asp
+            </remarks>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.Point.X">
+            <summary>
+            Specifies the X-coordinate of the point. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.Point.Y">
+            <summary>
+            Specifies the Y-coordinate of the point. 
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Input.HookService.MouseLLHookStruct">
+            <summary>
+            The MSLLHOOKSTRUCT structure contains information about a low-level keyboard input event. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.MouseLLHookStruct.Point">
+            <summary>
+            Specifies a Point structure that contains the X- and Y-coordinates of the cursor, in screen coordinates. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.MouseLLHookStruct.MouseData">
+             <summary>
+             If the message is WM_MOUSEWHEEL, the high-order word of this member is the wheel delta. 
+             The low-order word is reserved. A positive value indicates that the wheel was rotated forward, 
+             away from the user; a negative value indicates that the wheel was rotated backward, toward the user. 
+             One wheel click is defined as WHEEL_DELTA, which is 120. 
+            If the message is WM_XBUTTONDOWN, WM_XBUTTONUP, WM_XBUTTONDBLCLK, WM_NCXBUTTONDOWN, WM_NCXBUTTONUP,
+             or WM_NCXBUTTONDBLCLK, the high-order word specifies which X button was pressed or released, 
+             and the low-order word is reserved. This value can be one or more of the following values. Otherwise, MouseData is not used. 
+            XBUTTON1
+            The first X button was pressed or released.
+            XBUTTON2
+            The second X button was pressed or released.
+             </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.MouseLLHookStruct.Flags">
+             <summary>
+             Specifies the event-injected flag. An application can use the following value to test the mouse Flags. Value Purpose 
+            LLMHF_INJECTED Test the event-injected flag.  
+            0
+            Specifies whether the event was injected. The value is 1 if the event was injected; otherwise, it is 0.
+            1-15
+            Reserved.
+             </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.MouseLLHookStruct.Time">
+            <summary>
+            Specifies the Time stamp for this message.
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.MouseLLHookStruct.ExtraInfo">
+            <summary>
+            Specifies extra information associated with the message. 
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Input.HookService.KeyboardHookStruct">
+            <summary>
+            The KBDLLHOOKSTRUCT structure contains information about a low-level keyboard input event. 
+            </summary>
+            <remarks>
+            http://msdn.microsoft.com/library/default.asp?url=/library/en-us/winui/winui/windowsuserinterface/windowing/hooks/hookreference/hookstructures/cwpstruct.asp
+            </remarks>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.KeyboardHookStruct.VirtualKeyCode">
+            <summary>
+            Specifies a virtual-key code. The code must be a value in the range 1 to 254. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.KeyboardHookStruct.ScanCode">
+            <summary>
+            Specifies a hardware scan code for the key. 
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.KeyboardHookStruct.Flags">
+            <summary>
+            Specifies the extended-key flag, event-injected flag, context code, and transition-state flag.
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.KeyboardHookStruct.Time">
+            <summary>
+            Specifies the Time stamp for this message.
+            </summary>
+        </member>
+        <member name="F:BitFlex.EnterpriseServices.Input.HookService.KeyboardHookStruct.ExtraInfo">
+            <summary>
+            Specifies extra information associated with the message. 
+            </summary>
+        </member>
+        <member name="T:BitFlex.EnterpriseServices.Authentication.ISecureUser">
+            <summary>
+            Base implementation for a authenticatable user
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.ISecureUser.Name">
+            <summary>
+            Implements the user's name
+            </summary>
+        </member>
+        <member name="P:BitFlex.EnterpriseServices.Authentication.ISecureUser.Password">
+            <summary>
+            Implements the user's password
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,380 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{83935BC7-8B26-4F61-BD86-16E67871783A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cMenu.UI.ManagementTools.WPF</RootNamespace>
+    <AssemblyName>cMenu.UI.ManagementTools.WPF</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AttachedCommandBehavior">
+      <HintPath>..\External\ACB\AttachedCommandBehavior.dll</HintPath>
+    </Reference>
+    <Reference Include="AvalonDock, Version=1.3.3571.0, Culture=neutral, PublicKeyToken=85a1e0ada7ec13e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\Controls\Docking\AvalonDock\AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="AvalonDock.Themes">
+      <HintPath>..\External\Controls\Docking\AvalonDock\AvalonDock.Themes.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluent">
+      <HintPath>..\External\Controls\Fluent\Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="GongSolutions.Wpf.DragDrop">
+      <HintPath>..\External\Controls\DragDrop\GongSolutions.Wpf.DragDrop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell, Version=3.5.41019.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Core\Helpers\CMTPasswordHelper.cs" />
+    <Compile Include="Core\Helpers\CMTSecurityHelper.cs" />
+    <Compile Include="Core\iDelegates.cs" />
+    <Compile Include="Core\iEnums.cs" />
+    <Compile Include="Core\MVVM\CMVVMModelCache.cs" />
+    <Compile Include="Core\MVVM\CMVVMCachedNotificationObject.cs" />
+    <Compile Include="Models\Metaobjects\ModelMetaobjectComment.cs" />
+    <Compile Include="Models\Metaobjects\ModelMetaobjectLink.cs" />
+    <Compile Include="Models\Metaobjects\ModelMetaobject.cs" />
+    <Compile Include="Models\Core\ModelApplicationConnectionConfigurationModel.cs" />
+    <Compile Include="ViewModels\ViewModelConnectionManager.cs" />
+    <Compile Include="ViewModels\ViewModelConnectionOpen.cs" />
+    <Compile Include="ViewModels\ViewModelProperties.cs" />
+    <Compile Include="ViewModels\ViewModelWorkspace.cs" />
+    <Compile Include="Views\ViewConnectionEditor.xaml.cs">
+      <DependentUpon>ViewConnectionEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewConnectionManager.xaml.cs">
+      <DependentUpon>ViewConnectionManager.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewConnectionOpen.xaml.cs">
+      <DependentUpon>ViewConnectionOpen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewProperties.xaml.cs">
+      <DependentUpon>ViewProperties.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Resources\RecControlsTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ResControlsStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ResDataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ResErrorStyles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ResIcons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ResImages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewMain.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\CMTApplicationConfiguration.cs" />
+    <Compile Include="Core\CMTApplicationConnection.cs" />
+    <Compile Include="Core\CMTApplicationConnectionConfiguration.cs" />
+    <Compile Include="Core\CMTApplicationContext.cs" />
+    <Compile Include="Core\MVVM\CMVVMDelegateCommand.cs" />
+    <Compile Include="Core\MVVM\CMVVMNotificationObject.cs" />
+    <Compile Include="ViewModels\ViewModelConnectionEditor.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\ViewModelMain.cs" />
+    <Compile Include="Views\ViewMain.xaml.cs">
+      <DependentUpon>ViewMain.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Views\ViewConnectionEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewConnectionManager.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewConnectionOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ViewProperties.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Converters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\сMenu.Common\cMenu.Common.csproj">
+      <Project>{6F9E604A-6908-47D7-800F-8E516BDDD014}</Project>
+      <Name>cMenu.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Data\cMenu.Data.csproj">
+      <Project>{9390F7B6-0B67-4391-B62F-44B19FB5BF16}</Project>
+      <Name>cMenu.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.DB\cMenu.DB.csproj">
+      <Project>{8D62E952-7BD5-434A-A07A-9B9AC850CE0C}</Project>
+      <Name>cMenu.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Globalization\cMenu.Globalization.csproj">
+      <Project>{0F814B4F-B17E-45EA-8777-2FEF3239877E}</Project>
+      <Name>cMenu.Globalization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.IO\cMenu.IO.csproj">
+      <Project>{C1D93DA0-AB28-413E-8F16-2D34828DE59C}</Project>
+      <Name>cMenu.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Metaobjects.Extended\cMenu.Metaobjects.Extended.csproj">
+      <Project>{045CF3FC-A796-435D-9C46-9F9583461656}</Project>
+      <Name>cMenu.Metaobjects.Extended</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Metaobjects\cMenu.Metaobjects.csproj">
+      <Project>{84CA3DAE-A304-4CF2-A812-2C275520D7EF}</Project>
+      <Name>cMenu.Metaobjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Security\cMenu.Security.csproj">
+      <Project>{A2BC5EE7-7840-41F6-9612-6AB536405B6C}</Project>
+      <Name>cMenu.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoApplication.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icons\icoMain.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoConnect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoConnectionManager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoNewObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoLinkObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoProperties.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoCategory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoMenuItem.png" />
+    <Resource Include="Resources\Images\icoMenu.png" />
+    <Resource Include="Resources\Images\icoPolicy.png" />
+    <Resource Include="Resources\Images\icoFolder.png" />
+    <Resource Include="Resources\Images\icoOrg.png" />
+    <Resource Include="Resources\Images\icoMenuService.png" />
+    <Resource Include="Resources\Images\icoExpand.png" />
+    <Resource Include="Resources\Images\icoCollapse.png" />
+    <Resource Include="Resources\Images\imgSplash.jpg" />
+    <Resource Include="Resources\Images\icoSecurity.png" />
+    <Resource Include="Resources\Images\icoUser.png" />
+    <Resource Include="Resources\Images\icoGroup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoClose32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\imgBannerSmall.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoFolder32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoGroup32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoUser32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoPolicy32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoShortcut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoShortcut32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoOrg32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoMenuService32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoMenuServiceAmount32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoMenuServiceAmount.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoMenuItem32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoNewObject32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoMedia32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoMedia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoCategory32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoDevice32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoDevice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoConnect32.png" />
+    <Resource Include="Resources\Images\icoConnectionManager32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoLinkObject32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoProperties32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoEditObject32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoEditObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoCutObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoCutObject32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoCopyObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoCopyObject32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoPasteObject32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoPasteObject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoRefresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoRefresh32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoAdver32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Images\icoAdver.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

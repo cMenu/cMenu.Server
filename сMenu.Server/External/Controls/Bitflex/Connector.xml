@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<BitFlex.Internal>
+  <Connector>
+    <ConnectionString>Data Source=win-x58; Initial Catalog=Internal; Integrated Security=True</ConnectionString>
+  </Connector>
+</BitFlex.Internal>

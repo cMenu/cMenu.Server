@@ -1,0 +1,47 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="styleErrorTextBox" TargetType="{x:Type TextBox}">
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="True">
+                <Setter Property="ToolTip" Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}"/>                
+            </Trigger>
+        </Style.Triggers>
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <DockPanel LastChildFill="True">
+                        <TextBlock DockPanel.Dock="Right" Foreground="LightCoral" FontSize="10pt" Margin="-15,0,0,0" FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   ToolTip="{Binding Path=AdornedElement.ToolTip, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Adorner}}}">*</TextBlock>
+                        <Border BorderBrush="Transparent" BorderThickness="1">
+                            <AdornedElementPlaceholder Name="controlWithError"/>
+                        </Border>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="styleErrorPasswordBox" TargetType="{x:Type PasswordBox}">
+        <Style.Triggers>
+            <Trigger Property="Validation.HasError" Value="True">
+                <Setter Property="ToolTip" Value="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=(Validation.Errors)[0].ErrorContent}"/>
+            </Trigger>
+        </Style.Triggers>
+        <Setter Property="Validation.ErrorTemplate">
+            <Setter.Value>
+                <ControlTemplate>
+                    <DockPanel LastChildFill="True">
+                        <TextBlock DockPanel.Dock="Right" Foreground="LightCoral" FontSize="10pt" Margin="-15,0,0,0" FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   ToolTip="{Binding Path=AdornedElement.ToolTip, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Adorner}}}">*</TextBlock>
+                        <Border BorderBrush="Transparent" BorderThickness="1">
+                            <AdornedElementPlaceholder Name="controlWithError"/>
+                        </Border>
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

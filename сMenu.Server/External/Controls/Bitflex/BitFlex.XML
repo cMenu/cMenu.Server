@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BitFlex</name>
+    </assembly>
+    <members>
+        <member name="T:BitFlex.WindowsFont">
+            <summary>
+            Stores information about a Windows Vista or Windows 7 Font
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFont.Font">
+            <summary>
+            Gets or Sets the underlying font.
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFont.FontColor">
+            <summary>
+            Gets or Sets the underlying font color.
+            </summary>
+        </member>
+        <member name="T:BitFlex.CommandLineArgument">
+            <summary>
+            Represents a command line argument passed into the application by the Windows Shell
+            </summary>
+            <example>
+            Pattern:
+                -argument:value
+                -argument
+            Example:
+                -path:"C:\Program Files\MyProgram"
+                -username:danderson
+                -password:bitflex
+                -enablevisualstyles
+                -directxmode
+            </example>
+        </member>
+        <member name="M:BitFlex.CommandLineArgument.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the BitFlex.CommandLineArgument class
+            </summary>
+            <param name="name">The name of the argument</param>
+            <param name="parameters">The parameters associated with this argument</param>
+        </member>
+        <member name="M:BitFlex.CommandLineArgument.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the BitFlex.CommandLineArgument class
+            </summary>
+            <param name="name">The name of the argument</param>
+        </member>
+        <member name="M:BitFlex.CommandLineArgument.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.CommandLineArgument class
+            </summary>
+        </member>
+        <member name="P:BitFlex.CommandLineArgument.Name">
+            <summary>
+            Gets or sets the name of the argument
+            </summary>
+        </member>
+        <member name="P:BitFlex.CommandLineArgument.Value">
+            <summary>
+            Gets or sets the value of the argument
+            </summary>
+        </member>
+        <member name="T:BitFlex.CommandLineFormApplication`1">
+            <summary>
+            Enables the deriving class to enable the application to use BitFlex command line pattern with a Windows Form
+            </summary>
+        </member>
+        <member name="T:BitFlex.CommandLineApplication">
+            <summary>
+            Enables the deriving class to enable the application to use BitFlex command line pattern
+            </summary>
+            <example>
+            Pattern:
+                -argument:value
+                -argument
+            Example:
+                -path:"C:\Program Files\MyProgram"
+                -username:danderson
+                -password:bitflex
+                -enablevisualstyles
+                -directxmode
+            </example>
+        </member>
+        <member name="M:BitFlex.CommandLineApplication.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.CommandLineApplication class
+            </summary>
+        </member>
+        <member name="M:BitFlex.CommandLineApplication.ExecuteArguments">
+            <summary>
+            Implemented by the deriving class to execute the command line arguments
+            </summary>
+        </member>
+        <member name="P:BitFlex.CommandLineApplication.Arguments">
+            <summary>
+            Gets or sets the list of command line arguments received by the application
+            </summary>
+        </member>
+        <member name="M:BitFlex.CommandLineFormApplication`1.#ctor">
+            <summary>
+            Initializes a new instance of the BitFlex.CommandLineFormApplication class
+            </summary>
+        </member>
+        <member name="M:BitFlex.CommandLineFormApplication`1.Run">
+            <summary>
+            Runs the application using the specified form type
+            </summary>
+        </member>
+        <member name="P:BitFlex.CommandLineFormApplication`1.Form">
+            <summary>
+            Gets or sets the form that is run by the framework
+            </summary>
+        </member>
+        <member name="T:BitFlex.WindowsFonts">
+            <summary>
+            The default fonts used in Windows Vista and Windows 7
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.DisabledText">
+            <summary>
+            Disabled
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.DocumentHeadings">
+            <summary>
+            (none)
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.DocumentText">
+            <summary>
+            (none)
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.EditableText">
+            <summary>
+            Body Text
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.EmphasizedBoldText">
+            <summary>
+            Emphasized Text
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.EmphasizedItalicText">
+            <summary>
+            Emphasized Text
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.FileName">
+            <summary>
+            Content View
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.GroupHeader">
+            <summary>
+            Group Header
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.Link">
+            <summary>
+            HyperLinkText
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.LinksHover">
+            <summary>
+            Hot
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.MainInstructions">
+            <summary>
+            Main Instruction
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.NormalText">
+            <summary>
+            Body Text
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.SecondaryInstructions">
+            <summary>
+            Instruction
+            </summary>
+        </member>
+        <member name="P:BitFlex.WindowsFonts.TitleBarText">
+            <summary>
+            Caption Font
+            </summary>
+        </member>
+        <member name="M:BitFlex.OperatingSystemExtensions.GetEnvironmentPlatform(System.OperatingSystem)">
+            <summary>
+            Gets the Environment Platform of the current Operating System Environment
+            </summary>
+            <param name="env">The current environment</param>
+            <returns>Returns the Environment Platform</returns>
+        </member>
+        <member name="T:BitFlex.OperatingSystemPlatform">
+            <summary>
+            Represents the current platform configuration
+            </summary>
+        </member>
+        <member name="F:BitFlex.OperatingSystemPlatform.Unknown">
+            <summary>
+            An unknown Platform
+            </summary>
+        </member>
+        <member name="F:BitFlex.OperatingSystemPlatform.x64">
+            <summary>
+            The 64-Bit Platform
+            </summary>
+        </member>
+        <member name="F:BitFlex.OperatingSystemPlatform.x86">
+            <summary>
+            The 32-Bit Platform
+            </summary>
+        </member>
+    </members>
+</doc>

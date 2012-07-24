@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BitFlex.Internal</name>
+    </assembly>
+    <members>
+        <member name="T:BitFlex.Internal.EmployeeStore">
+            <summary>
+            Todo: documentation
+            </summary>
+        </member>
+        <member name="M:BitFlex.Internal.EmployeeStore.ContainsEmployee(System.String,System.String,System.String)">
+            <summary>
+            Returns a System.Boolean value indicating whether the specified employee(s) exist in the data source
+            </summary>
+            <param name="firstName">The first name of the employee</param>
+            <param name="lastName">The last name of the employee</param>
+            <param name="middleInitial">Optional: the middle initial of the employee</param>
+            <returns>Returns true if one or more employees matching the specified information exist, otherwise returns false</returns>
+        </member>
+        <member name="M:BitFlex.Internal.EmployeeStore.ContainsUser(System.String)">
+            <summary>
+            Returns a System.Boolean value indicating whether the specified user exists in the data source
+            </summary>
+            <param name="userID">The UserID of the user to check for</param>
+            <returns>Returns true if the user exists, otherwise returns false</returns>
+        </member>
+        <member name="M:BitFlex.Internal.EmployeeStore.CreateEmployee(BitFlex.Internal.Linq.Employee)">
+            <summary>
+            Adds the specified employee object to the data source
+            </summary>
+            <param name="employee">The employee object to add</param>
+            <returns>Returns true if the employee was created, otherwise returns false</returns>
+        </member>
+        <member name="T:BitFlex.Internal.Constants.Common">
+            <summary>
+            Common internal constants
+            </summary>
+        </member>
+    </members>
+</doc>

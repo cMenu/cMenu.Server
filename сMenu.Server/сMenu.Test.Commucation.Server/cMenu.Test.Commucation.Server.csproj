@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE738C27-34FD-42F8-AED7-F5B2CE7D27BC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cMenu.Test.Commucation.Server</RootNamespace>
+    <AssemblyName>cMenu.Test.Commucation.Server</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\сMenu.Common\cMenu.Common.csproj">
+      <Project>{6F9E604A-6908-47D7-800F-8E516BDDD014}</Project>
+      <Name>cMenu.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Data\cMenu.Data.csproj">
+      <Project>{9390F7B6-0B67-4391-B62F-44B19FB5BF16}</Project>
+      <Name>cMenu.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.DB\cMenu.DB.csproj">
+      <Project>{8D62E952-7BD5-434A-A07A-9B9AC850CE0C}</Project>
+      <Name>cMenu.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.IO\cMenu.IO.csproj">
+      <Project>{C1D93DA0-AB28-413E-8F16-2D34828DE59C}</Project>
+      <Name>cMenu.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Server\cMenu.Communication.csproj">
+      <Project>{2A9CDFB9-4907-4F48-8607-878E30DF8C8C}</Project>
+      <Name>cMenu.Communication</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:AvalonDock="clr-namespace:AvalonDock;assembly=AvalonDock">
+    <ControlTemplate TargetType="{x:Type AvalonDock:DocumentPane}" x:Key="ctrlTemplateSDIDocumentPane" >
+        <Border BorderThickness="2" 
+               BorderBrush="White" 
+               CornerRadius="3" 
+               Margin="2, 2, 2, 2" 
+               Focusable="False">
+            <ContentPresenter 
+             Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=SelectedItem.Content}"/>
+        </Border>
+    </ControlTemplate>
+</ResourceDictionary>
