@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ERROR_DB_INTERACTION" xml:space="preserve">
+    <value>Ошибка при взаимодействии с базой данных</value>
+  </data>
+  <data name="ERROR_MSG_ADV_NULL" xml:space="preserve">
+    <value>Невозможно найти указанный рекламный модуль</value>
+  </data>
+  <data name="ERROR_MSG_AUTH_TOKEN_NULL" xml:space="preserve">
+    <value>Не указан ключ идентификации устройства</value>
+  </data>
+  <data name="ERROR_MSG_BAD_APP_PARAMS_JSON" xml:space="preserve">
+    <value>Параметры функции имеют неверный формат</value>
+  </data>
+  <data name="ERROR_MSG_BAD_CONFIG" xml:space="preserve">
+    <value>Файл конфигурации не найден или имеет неверный формат</value>
+  </data>
+  <data name="ERROR_MSG_BAD_ORDER" xml:space="preserve">
+    <value>Неверная структура заказа</value>
+  </data>
+  <data name="ERROR_MSG_BAD_RESULT_FORMAT_TYPE" xml:space="preserve">
+    <value>Неверный тип форматирования результирующих данных</value>
+  </data>
+  <data name="ERROR_MSG_BAD_SERVER_APP_DISABLED" xml:space="preserve">
+    <value>Вызываемая функция в данный момент недоступна или отключена</value>
+  </data>
+  <data name="ERROR_MSG_BAD_SERVER_APP_ID" xml:space="preserve">
+    <value>Неверный идентификатор функции</value>
+  </data>
+  <data name="ERROR_MSG_BAD_SERVER_APP_INTERNAL_ERROR" xml:space="preserve">
+    <value>Внутренняя ошибка функции</value>
+  </data>
+  <data name="ERROR_MSG_BAD_SERVER_APP_NULL" xml:space="preserve">
+    <value>Функция с указанными идентификатором не найдена</value>
+  </data>
+  <data name="ERROR_MSG_BAD_SERVER_CONFIG_FILE" xml:space="preserve">
+    <value>Файл конфигурации не найден или имеет неверный формат</value>
+  </data>
+  <data name="ERROR_MSG_CATEGORY_NULL" xml:space="preserve">
+    <value>Невозможно найти указанную категорию</value>
+  </data>
+  <data name="ERROR_MSG_COMMUNICATION_CLIENT_ERROR" xml:space="preserve">
+    <value>Ошибка коммуникации. Возможно, на сервере произошел непредвиденный сбой</value>
+  </data>
+  <data name="ERROR_MSG_DEADLINE_NULL" xml:space="preserve">
+    <value>В запросе не указана длительность сессии</value>
+  </data>
+  <data name="ERROR_MSG_DEVICE_BANNED" xml:space="preserve">
+    <value>Данному устройству отказано в авторизации, так как оно, возможно, находится в черном списке</value>
+  </data>
+  <data name="ERROR_MSG_DEVICE_ID_EMPTY" xml:space="preserve">
+    <value>В запросе не указан идентификатор устройства</value>
+  </data>
+  <data name="ERROR_MSG_DEVICE_ID_NULL" xml:space="preserve">
+    <value>Устройство с заданным идентификатором не найдено</value>
+  </data>
+  <data name="ERROR_MSG_DEVICE_MAC_EMPTY" xml:space="preserve">
+    <value>В запросе не указан MAC адрес устройства</value>
+  </data>
+  <data name="ERROR_MSG_DEVICE_NAME_EMPTY" xml:space="preserve">
+    <value>В запросе не указано наименование устройства</value>
+  </data>
+  <data name="ERROR_MSG_DEVICE_TYPE_NULL" xml:space="preserve">
+    <value>В запросе не указан тип регистриемого устройства.</value>
+  </data>
+  <data name="ERROR_MSG_FUNCTION_NULL" xml:space="preserve">
+    <value>Указанная функция не найдена на сервере</value>
+  </data>
+  <data name="ERROR_MSG_INPUT_ORDER_NULL" xml:space="preserve">
+    <value>Не указан заказ</value>
+  </data>
+  <data name="ERROR_MSG_KEY_ID_NULL" xml:space="preserve">
+    <value>В запросе не указана ключевая информация: идентификатор или ключ объекта</value>
+  </data>
+  <data name="ERROR_MSG_LOGIN_NULL" xml:space="preserve">
+    <value>В запросе не указано имя пользователя</value>
+  </data>
+  <data name="ERROR_MSG_MEDIA_NULL" xml:space="preserve">
+    <value>Невозможно найти указанный медиа ресурс</value>
+  </data>
+  <data name="ERROR_MSG_NO_MENUS" xml:space="preserve">
+    <value>В базе не найдено ни одного меню</value>
+  </data>
+  <data name="ERROR_MSG_NO_PRIMARY_MENU" xml:space="preserve">
+    <value>В базне не найдено ни одного активного меню</value>
+  </data>
+  <data name="ERROR_MSG_ORDER_NULL" xml:space="preserve">
+    <value>Невозможно найти указанный заказ</value>
+  </data>
+  <data name="ERROR_MSG_PASSWORD_NULL" xml:space="preserve">
+    <value>В запросе не указан пароль пользователя</value>
+  </data>
+  <data name="ERROR_MSG_SERVER_ENDPOINT" xml:space="preserve">
+    <value>Точка входа</value>
+  </data>
+  <data name="ERROR_MSG_SERVER_INIT" xml:space="preserve">
+    <value>Инициализация сервера</value>
+  </data>
+  <data name="ERROR_MSG_SERVER_START" xml:space="preserve">
+    <value>Запуск сервера</value>
+  </data>
+  <data name="ERROR_MSG_SERVER_STOP" xml:space="preserve">
+    <value>Остановка сервера</value>
+  </data>
+  <data name="ERROR_MSG_SERVICE_UNAVAILABLE" xml:space="preserve">
+    <value>Сервер не отвечает на запросы</value>
+  </data>
+  <data name="ERROR_MSG_SESSION_EXPIRED" xml:space="preserve">
+    <value>Сессия истекла</value>
+  </data>
+  <data name="ERROR_MSG_SESSION_NULL" xml:space="preserve">
+    <value>Сессия с указанным ключом устройсва не найдена</value>
+  </data>
+  <data name="ERROR_MSG_SHOW_NOTIFICATION" xml:space="preserve">
+    <value>Уведомление успешно отображено</value>
+  </data>
+  <data name="ERROR_MSG_SUCCESS" xml:space="preserve">
+    <value>Операция выполнена успешно</value>
+  </data>
+  <data name="ERROR_MSG_UNABLE_SHOW_NOTIFICATION" xml:space="preserve">
+    <value>Невозможно отобразить уведомление на конечном компьютере</value>
+  </data>
+  <data name="ERROR_MSG_USER_AUTHENTICATED" xml:space="preserve">
+    <value>Пользователь аутентифицирован</value>
+  </data>
+  <data name="ERROR_MSG_USER_BANNED" xml:space="preserve">
+    <value>Пользователю, соответствуюшему указанной сессии, запрещен вход в систему</value>
+  </data>
+  <data name="ERROR_MSG_USER_DISABLED" xml:space="preserve">
+    <value>Пользователю, соответствуюшему указанной сессии, не разрешен вход в систему</value>
+  </data>
+  <data name="ERROR_MSG_USER_HASNT_ACCESS_TO_OBJECT" xml:space="preserve">
+    <value>Пользователь не имеет прав доступа к выбранному объекту</value>
+  </data>
+  <data name="ERROR_MSG_USER_LOGIN_PASS_NULL" xml:space="preserve">
+    <value>Пользователь с заданными логином и паролем не найдены</value>
+  </data>
+  <data name="ERROR_MSG_USER_NOT_ALLOWED_BIND_DEVICES" xml:space="preserve">
+    <value>У пользователя нет прав на привязку устройств</value>
+  </data>
+  <data name="ERROR_MSG_USER_NOT_ALLOWED_CREATE_LINKS" xml:space="preserve">
+    <value>Невозможно установить связь между объектами</value>
+  </data>
+  <data name="ERROR_MSG_USER_NOT_ALLOWED_CREATE_SEC_RECORD" xml:space="preserve">
+    <value>Не удалось раздать права на объект пользователю или группе</value>
+  </data>
+  <data name="ERROR_MSG_USER_NOT_ALLOWED_CREATE_SESSIONS" xml:space="preserve">
+    <value>У пользователя нет прав на создание сессий</value>
+  </data>
+  <data name="ERROR_MSG_USER_SESSION_NULL" xml:space="preserve">
+    <value>Не найден пользователь, соответствующий указанной сессии</value>
+  </data>
+  <data name="ERROR_MSG_USER_UNABLE_TO_EDIT_ORDERS" xml:space="preserve">
+    <value>Пользователь не имеет права на редактирование списка заказов</value>
+  </data>
+  <data name="ERROR_MSG_USER_UNABLE_TO_VIEW_OBJECT" xml:space="preserve">
+    <value>Пользователь не имеет права на просмотр списка объектов</value>
+  </data>
+  <data name="ERROR_MSG_USER_UNABLE_TO_VIEW_ORDERS" xml:space="preserve">
+    <value>Пользователь не имеет права на просмотр списка заказов</value>
+  </data>
+  <data name="ERROR_MT_AUTH_DATA_NULL" xml:space="preserve">
+    <value>Указаны неверные данные для аутентификации</value>
+  </data>
+  <data name="ERROR_MT_CLOSE_CONNECTION" xml:space="preserve">
+    <value>Вы действительно хотите закрыть текущее соединение?</value>
+  </data>
+  <data name="ERROR_MT_DB_NAME_NULL" xml:space="preserve">
+    <value>Не указано имя БД</value>
+  </data>
+  <data name="ERROR_MT_DB_PASS_NULL" xml:space="preserve">
+    <value>Не указан пароль пользователя сервера БД</value>
+  </data>
+  <data name="ERROR_MT_DB_USER_NULL" xml:space="preserve">
+    <value>Не указано имя пользователя сервера БД</value>
+  </data>
+  <data name="ERROR_MT_DELETE_ITEM" xml:space="preserve">
+    <value>Вы хотите удалить выделенный элемент?</value>
+  </data>
+  <data name="ERROR_MT_DELETE_ITEM_2" xml:space="preserve">
+    <value>Вы хотите удалить элемент</value>
+  </data>
+  <data name="ERROR_MT_LANGUAGE_CODE_BAD" xml:space="preserve">
+    <value>Код языка имеет целочисленный формат</value>
+  </data>
+  <data name="ERROR_MT_LANGUAGE_CODE_NULL" xml:space="preserve">
+    <value>Не указан код языка по умолчанию</value>
+  </data>
+  <data name="ERROR_MT_LOGIN_NULL" xml:space="preserve">
+    <value>Не указано имя пользователя</value>
+  </data>
+  <data name="ERROR_MT_NAME_NULL" xml:space="preserve">
+    <value>Не указано имя</value>
+  </data>
+  <data name="ERROR_MT_PASS_NULL" xml:space="preserve">
+    <value>Не указан пароль</value>
+  </data>
+  <data name="ERROR_MT_SERVER_ADDR_NULL" xml:space="preserve">
+    <value>Не указан адрес сервера БД</value>
+  </data>
+  <data name="ERROR_MT_SERVER_NOT_RESPOND" xml:space="preserve">
+    <value>Невозможно связаться с сервером. Возможно, неверно указана информация о пользователе сервера БД или сервер БД остановлен</value>
+  </data>
+  <data name="ERROR_MT_USER_NOT_ENOUGH_RIGHTS_SEC_REPO" xml:space="preserve">
+    <value>Пользователь с указанным логином не имеет права на просмотр репозитория безопасности</value>
+  </data>
+  <data name="MSG_CALL_OFICIANT" xml:space="preserve">
+    <value>Вызов официанта</value>
+  </data>
+  <data name="MSG_COPY" xml:space="preserve">
+    <value>Копия</value>
+  </data>
+  <data name="MSG_DEVICE_NAME" xml:space="preserve">
+    <value>Имя устройства</value>
+  </data>
+  <data name="MSG_MAKE_ORDER" xml:space="preserve">
+    <value>Заказ</value>
+  </data>
+  <data name="MSG_SHORTCUT" xml:space="preserve">
+    <value>Ярлык для</value>
+  </data>
+</root>
