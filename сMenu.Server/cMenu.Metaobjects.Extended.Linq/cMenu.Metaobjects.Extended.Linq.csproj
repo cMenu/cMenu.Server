@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FD30422C-67A6-4A51-8DCD-775D96269631}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>cMenu.Metaobjects.Extended.Linq</RootNamespace>
+    <AssemblyName>cMenu.Metaobjects.Extended.Linq</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=4.0.8.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External\JSON.NET\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Advertisement\CAdvertisement.cs" />
+    <Compile Include="CFolder.cs" />
+    <Compile Include="CMediaResource.cs" />
+    <Compile Include="CMetaobjectExtented.cs" />
+    <Compile Include="CMetaobjectShortcut.cs" />
+    <Compile Include="Geography\CCity.cs" />
+    <Compile Include="Geography\CCountry.cs" />
+    <Compile Include="Geography\CState.cs" />
+    <Compile Include="Menu\CCategory.cs" />
+    <Compile Include="Menu\CMenu.cs" />
+    <Compile Include="Menu\CMenuService.cs" />
+    <Compile Include="Menu\CMenuServiceAmount.cs" />
+    <Compile Include="Menu\COrganization.cs" />
+    <Compile Include="Menu\COrganizationNetwork.cs" />
+    <Compile Include="Menu\COrganizationTable.cs" />
+    <Compile Include="Order\CMenuServiceOrder.cs" />
+    <Compile Include="Order\CMenuServiceOrderAmount.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cMenu.Metaobjects.Linq\cMenu.Metaobjects.Linq.csproj">
+      <Project>{4E49B0DA-E42C-4FD5-85BC-56D1D8CC8B9B}</Project>
+      <Name>cMenu.Metaobjects.Linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\cMenu.Security.Linq\cMenu.Security.Linq.csproj">
+      <Project>{E389981C-85CE-4D5C-B21D-470F3D6DEDEE}</Project>
+      <Name>cMenu.Security.Linq</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Common\cMenu.Common.csproj">
+      <Project>{6F9E604A-6908-47D7-800F-8E516BDDD014}</Project>
+      <Name>cMenu.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.DB\cMenu.DB.csproj">
+      <Project>{8D62E952-7BD5-434A-A07A-9B9AC850CE0C}</Project>
+      <Name>cMenu.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.IO\cMenu.IO.csproj">
+      <Project>{C1D93DA0-AB28-413E-8F16-2D34828DE59C}</Project>
+      <Name>cMenu.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Metaobjects.Extended\cMenu.Metaobjects.Extended.csproj">
+      <Project>{045CF3FC-A796-435D-9C46-9F9583461656}</Project>
+      <Name>cMenu.Metaobjects.Extended</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Metaobjects\cMenu.Metaobjects.csproj">
+      <Project>{84CA3DAE-A304-4CF2-A812-2C275520D7EF}</Project>
+      <Name>cMenu.Metaobjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\сMenu.Security\cMenu.Security.csproj">
+      <Project>{A2BC5EE7-7840-41F6-9612-6AB536405B6C}</Project>
+      <Name>cMenu.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
